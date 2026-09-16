@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07151d" />
+    <title>Slime//Evolution — Consume. Adapt. Ascend.</title>
+  </head>
+  <body>
+    <div id="game-shell">
+      <canvas id="game-canvas" aria-label="3D Slime Evolution game world"></canvas>
+      <main id="hud">
+        <header class="topbar glass">
+          <div class="brand"><span class="brand-orb"></span><div><strong>SLIME<span>//</span>EVOLUTION</strong><small>CONSUME · ADAPT · ASCEND</small></div></div>
+          <div class="level-readout"><span>SECTOR</span><b id="level-name">VERDANT CRADLE</b><em id="level-number">01 / 10</em></div>
+          <button class="icon-btn" id="sound-toggle" aria-label="Toggle sound">♫</button>
+        </header>
+        <section class="status-panel glass">
+          <div class="player-title"><span class="eyebrow">APEX ORGANISM</span><strong>YOU</strong><span id="player-stars" class="stars">★</span></div>
+          <div class="power-meter"><div id="power-fill"></div></div>
+          <div class="meter-row"><span>GROWTH <b id="growth-label">0 / 3</b></span><span>THREAT <b id="threat-label">LOW</b></span></div>
+        </section>
+        <section class="objective glass"><span class="eyebrow">DIRECTIVE</span><strong id="objective-text">Find something smaller. The first meal breaks the shields.</strong></section>
+        <aside class="legend glass"><div><i class="dot prey"></i><span>Weaker<br><b>CONSUME</b></span></div><div><i class="dot threat"></i><span>Stronger<br><b>ESCAPE</b></span></div></aside>
+        <section class="boss-card glass" id="boss-card"><span class="eyebrow">GUARDIAN SIGNAL</span><strong>THE WARDEN</strong><span id="boss-stars" class="stars">★★★★</span><p>Shields lock both apex organisms until your first successful consume.</p></section>
+        <div class="controls-hint glass"><span>WASD</span> MOVE <span>SHIFT</span> BURST <span>SPACE</span> PULSE</div>
+        <section class="start-card glass" id="start-card"><span class="eyebrow">BOOT SEQUENCE 01</span><h1>Wake the<br><em>hungry star.</em></h1><p>Grow by consuming anything weaker than you. Every sector mutates the rules.</p><button class="primary-btn" id="start-btn">ENTER THE CRADLE <span>↗</span></button><div class="tip">Tip: dash into the glowing small forms first.</div></section>
+        <section class="pause-card glass hidden" id="pause-card"><span class="eyebrow">SIMULATION PAUSED</span><h2>Hold the line.</h2><button class="primary-btn" id="resume-btn">RESUME <span>↗</span></button></section>
+        <div class="toast" id="toast" role="status"></div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
